@@ -6,78 +6,112 @@
 
 <title>Таможенный терминал «Бенякони»</title>
 
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #f0f0f0;
   margin: 0;
-  padding: 30px;
+  padding: 16px;
+  background: #f0f0f0;
   font-family: 'Source Serif 4', serif;
 }
 
+/* ===== PAGE ===== */
 .page {
   max-width: 800px;
-  margin: auto;
-  background: #ffffff;
-  padding: 50px 40px;
+  width: 100%;
+  margin: 0 auto;
   border: 1px solid #cfcfcf;
+
+  background-image: url('stripe.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* DESKTOP */
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  width: 100%;
+  padding: clamp(24px, 4vw, 48px);
   text-align: center;
+  background: rgba(255, 255, 255, 0.9);
 }
 
+/* ===== LOGO ===== */
 .logo img {
-  max-width: 180px;
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 140px; /* уменьшено на 20% */
+  height: auto;
+  margin-bottom: 24px;
 }
 
+/* ===== TEXT ===== */
 h1 {
-  font-size: 22px;
-  margin-bottom: 25px;
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-bottom: 22px;
 }
 
 .block {
-  margin-bottom: 18px;
-  font-size: 17px;
+  font-size: clamp(15px, 2.2vw, 17px);
+  margin-bottom: 16px;
 }
 
 .block strong {
   font-weight: 600;
 }
 
+/* ===== SEPARATOR ===== */
 .separator {
-  margin: 30px 0;
+  width: 50%;
+  max-width: 260px;
+  margin: 24px auto;
   border-top: 1px solid #cccccc;
 }
 
-/* Футер */
+/* ===== FOOTER ===== */
 .footer {
-  margin-top: 35px;
+  margin-top: 30px;
   font-size: 14px;
   color: #555;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-align: center;
+  gap: 8px;
 }
 
-/* Картинка печати под текстом */
 .footer img {
-  max-width: 400px;
+  width: 100%;
+  max-width: 340px; /* -15% */
   height: auto;
 }
 
-/* Мобильная адаптация */
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
+
+  body {
+    padding: 8px;
+  }
+
+  /* ФОН ДЛЯ ТЕЛЕФОНА — растягиваем по ширине и высоте */
   .page {
-    padding: 30px 20px;
+    background-size: 100% 100%;
+    background-position: center;
   }
-  h1 {
-    font-size: 20px;
+
+  .separator {
+    width: 65%;
   }
-  .block {
-    font-size: 16px;
-  }
+
   .footer img {
     max-width: 200px;
   }
@@ -88,52 +122,54 @@ h1 {
 <body>
 
 <div class="page">
+  <div class="content">
 
-  <div class="logo">
-    <img src="emblem.png" alt="Герб">
+    <div class="logo">
+      <img src="emblem.png" alt="Герб">
+    </div>
+
+    <h1>Таможенный терминал «Бенякони»</h1>
+
+    <div class="block">
+      <strong>Ваш номер очереди:</strong><br>
+      14
+    </div>
+
+    <div class="block">
+      <strong>Перед вами:</strong><br>
+      13
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="block">
+      <strong>Зарегистрирован:</strong><br>
+      12:56/21.01.2026
+    </div>
+
+    <div class="block">
+      <strong>Зарезервированное время:</strong><br>
+      18:45/21.01.2026
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="block">
+      <strong>Товар:</strong><br>
+      Kia Optima
+    </div>
+
+    <div class="block">
+      <strong>Описание:</strong><br>
+      KNAGT417GL5385636
+    </div>
+
+    <div class="footer">
+      <span>Информация предоставлена в электронном виде</span>
+      <img src="info-icon.png" alt="Печать">
+    </div>
+
   </div>
-
-  <h1>Таможенный терминал «Бенякони»</h1>
-
-  <div class="block">
-    <strong>Ваш номер очереди:</strong><br>
-    14
-  </div>
-
-  <div class="block">
-    <strong>Перед вами:</strong><br>
-    13
-  </div>
-
-  <div class="separator"></div>
-
-  <div class="block">
-    <strong>Зарегистрирован:</strong><br>
-    12:56 / 21.01.2026
-  </div>
-
-  <div class="block">
-    <strong>Зарезервированное время:</strong><br>
-    18:45 / 21.01.2026
-  </div>
-
-  <div class="separator"></div>
-
-  <div class="block">
-    <strong>Товар:</strong><br>
-    Kia Optima
-  </div>
-
-  <div class="block">
-    <strong>Описание:</strong><br>
-    KNAGT417GL5385636
-  </div>
-
-  <div class="footer">
-    <span>Информация предоставлена в электронном виде</span>
-    <img src="info-icon.png" alt="Печать">
-  </div>
-
 </div>
 
 </body>
