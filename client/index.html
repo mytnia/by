@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Таможенный терминал «Бенякони»</title>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: #f0f0f0;
+  font-family: 'Source Serif 4', serif;
+}
+
+/* ===== PAGE ===== */
+.page {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #cfcfcf;
+
+  background-image: url('stripe.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* DESKTOP */
+
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  width: 100%;
+  padding: clamp(24px, 4vw, 48px);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== LOGO ===== */
+.logo img {
+  width: 100%;
+  max-width: 140px; /* уменьшено на 20% */
+  height: auto;
+  margin-bottom: 24px;
+}
+
+/* ===== TEXT ===== */
+h1 {
+  font-size: clamp(18px, 2.5vw, 22px);
+  margin-bottom: 22px;
+}
+
+.block {
+  font-size: clamp(15px, 2.2vw, 17px);
+  margin-bottom: 16px;
+}
+
+.block strong {
+  font-weight: 600;
+}
+
+/* ===== SEPARATOR ===== */
+.separator {
+  width: 50%;
+  max-width: 260px;
+  margin: 24px auto;
+  border-top: 1px solid #cccccc;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer img {
+  width: 100%;
+  max-width: 340px; /* -15% */
+  height: auto;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  body {
+    padding: 8px;
+  }
+
+  /* ФОН ДЛЯ ТЕЛЕФОНА — растягиваем по ширине и высоте */
+  .page {
+    background-size: 100% 100%;
+    background-position: center;
+  }
+
+  .separator {
+    width: 65%;
+  }
+
+  .footer img {
+    max-width: 200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+  <div class="content">
+
+    <div class="logo">
+      <img src="emblem.png" alt="Герб">
+    </div>
+
+    <h1>Таможенный терминал «Бенякони»</h1>
+
+    <div class="block">
+      <strong>Ваш номер очереди:</strong><br>
+      6
+    </div>
+
+    <div class="block">
+      <strong>Перед вами:</strong><br>
+      5
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="block">
+      <strong>Зарегистрирован:</strong><br>
+      09:20/04.02.2026
+    </div>
+
+    <div class="block">
+      <strong>Зарезервированное время:</strong><br>
+      15:00/04.02.2026
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="block">
+      <strong>Товар:</strong><br>
+      Suzuki Swift
+    </div>
+
+    <div class="block">
+      <strong>Описание:</strong><br>
+      JSAAZC53S10600295
+    </div>
+
+    <div class="footer">
+      <span>Информация предоставлена в электронном виде</span>
+      <img src="info-icon.png" alt="Печать">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
